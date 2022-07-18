@@ -1,4 +1,4 @@
-@media screen and (max-width: 765px) {
+@media (max-width: 765px) {
   .container {
     max-width: 765px;
     margin-right: auto;
@@ -9,6 +9,9 @@
     background-color: blue;
     display: flex;
     border-bottom: 2px solid;
+  }
+  nav {
+    background-color: red;
   }
 }
 
