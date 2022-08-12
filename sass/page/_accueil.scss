@@ -25,11 +25,11 @@ nav {
     P {
       color: rgb(86, 82, 82);
       text-align: center;
-      background-color: red;
     }
-
 
     button {
-        background: linear-gradient($fond-rose, $fond-violet);
+       @include bouton;
     }
+   
+
 }

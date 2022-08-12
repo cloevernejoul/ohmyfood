@@ -47,5 +47,14 @@ nav input {
   color: rgb(86, 82, 82);
   text-align: center;
 }
+.presentation button {
+  border-radius: 25px;
+  height: 50px;
+  width: 66%;
+  border: none;
+  color: #fdfdfd;
+  background: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: inset 0px 2px 5px #c7c7c7;
+}
 
 /*# sourceMappingURL=style.css.map */

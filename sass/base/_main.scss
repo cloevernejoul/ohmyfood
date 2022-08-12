@@ -1,6 +1,6 @@
-@import "utils/_variable";
-@import "utils/_mixin";
-@import "utils/_placeholder";
+@import "../utils/variable";
+@import "../utils/mixin";
+@import "../utils/placeholder";
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
 
@@ -14,5 +14,5 @@
     font-family: 'Source Sans Pro', sans-serif;
   }
 
-@import "layouts/_layout.scss";
-@import "page/_accueil.scss";
+@import "../layouts/layout";
+@import "../page/accueil";
