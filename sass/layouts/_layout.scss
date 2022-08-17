@@ -9,6 +9,34 @@
         }     
     }
 
-
+    footer {
+      background-color: $gris-tertiaire;
+      padding: 20px;
+      
+      img {
+        color: $txt-fond-sombre;
+        width: 100px;
+      }
+    
+      ul {
+        padding: 0%;
+        li {
+          list-style: none;
+          padding: 5px;
+    
+          a {
+             text-decoration: none;
+            color: $txt-fond-sombre;
+    
+            i {
+              padding-right: 10px;
+            }
+          }
+           
+        }
+      
+      }
+      
+    }
 
     

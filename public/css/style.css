@@ -1,8 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap");
-.fonctionnement ul li span, .fonctionnement ul li, .fonctionnement ul, .presentation, nav, header {
+.resto .image .coeur, .resto .image, .resto, .fonctionnement ul li span, .fonctionnement ul li, .fonctionnement ul, .presentation, nav, header {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.resto .image .coeur {
+  margin: 0px;
+  color: #070707;
 }
 
 * {
@@ -21,6 +26,29 @@ header {
 }
 header img {
   width: 60%;
+}
+
+footer {
+  background-color: #28282a;
+  padding: 20px;
+}
+footer img {
+  color: #fdfdfd;
+  width: 100px;
+}
+footer ul {
+  padding: 0%;
+}
+footer ul li {
+  list-style: none;
+  padding: 5px;
+}
+footer ul li a {
+  text-decoration: none;
+  color: #fdfdfd;
+}
+footer ul li a i {
+  padding-right: 10px;
 }
 
 nav {
@@ -79,6 +107,26 @@ nav input {
   height: 25px;
   background-color: #9356DC;
   color: #fdfdfd;
+}
+
+.resto {
+  background-color: #f6f6f6;
+  flex-direction: column;
+  padding: 20px;
+}
+.resto .image {
+  flex-direction: column;
+  text-decoration: none;
+  background-color: white;
+  width: 100%;
+}
+.resto .image img {
+  width: 100%;
+  height: 50%;
+  border-radius: 25px;
+}
+.resto .image .coeur {
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=style.css.map */
