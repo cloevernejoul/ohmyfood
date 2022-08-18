@@ -9,3 +9,8 @@
     }    
 
     
+@mixin dimension ($longeur,$hauteur,$radius){
+        width: $longeur;
+        height: $hauteur;
+        border-radius: $radius;
+    }

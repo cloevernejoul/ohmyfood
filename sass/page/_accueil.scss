@@ -13,20 +13,13 @@ nav {
 
 .presentation {
     background-color: $gris-principale;
-    flex-direction: column;
     padding: 35px;
     @extend %flex-center;
+    flex-direction: column;
 
     h1 {
       margin: 0px;
-      text-align: center;
     }
-    
-    P {
-      color: rgb(86, 82, 82);
-      text-align: center;
-    }
-
     button {
        @include bouton(66%);
     }
@@ -36,25 +29,19 @@ nav {
   margin: 10px;
     
   ul {
-    @extend %flex-center;
-    flex-direction: column;
-    
+    @extend %flex-column;
     padding: 0px;
     list-style: none;
 
        li {
         @extend %flex-center;
+        @include dimension(325px,70px,25px);
         background-color: $gris-principale;
         box-shadow: 0px 6px 17px #c7c7c7;
-        border-radius: 25px;
-        height: 70px;
-        width: 325px;
         margin: 10px;
               span {
                     @extend %flex-center;
-                    border-radius: 25px;
-                    width: 25px;
-                    height: 25px;
+                    @include dimension (25px,25px,25px);
                     background-color: $fond-violet;
                     color:$txt-fond-sombre ;
                   }
@@ -63,28 +50,29 @@ nav {
 }
 .resto {
   background-color: $gris-principale;
-  @extend %flex-center;
-  flex-direction: column;
+  @extend %flex-column;
   padding: 20px;
 
     .image {
-      @extend %flex-center;
-      flex-direction: column;
+      @extend %flex-column;
       text-decoration: none;
       background-color: white;
-      width: 100%;
       
         img {
-        width: 100%;
-        height: 50%;
-        border-radius: 25px;
+        @include dimension (100%,50%,25px);
        }
 
-       .coeur {
-        @extend %flex-center;
-        flex-direction: column;
-        @extend %txt;
+       .txt {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        align-items: center;
+        color: $txt-fond-clair;
+        
+                  h2, p {
+                  margin: 0%;
+                }
        }
+       
     }
 }
-

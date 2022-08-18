@@ -1,13 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap");
-.resto .image .coeur, .resto .image, .resto, .fonctionnement ul li span, .fonctionnement ul li, .fonctionnement ul, .presentation, nav, header {
+.fonctionnement ul li span, .fonctionnement ul li, .presentation, nav, header {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
-.resto .image .coeur {
-  margin: 0px;
-  color: #070707;
+.resto .image, .resto, .fonctionnement ul {
+  display: flex;
+  flex-direction: column;
 }
 
 * {
@@ -34,7 +35,7 @@ footer {
 }
 footer img {
   color: #fdfdfd;
-  width: 100px;
+  width: 120px;
 }
 footer ul {
   padding: 0%;
@@ -64,16 +65,11 @@ nav input {
 
 .presentation {
   background-color: #f6f6f6;
-  flex-direction: column;
   padding: 35px;
+  flex-direction: column;
 }
 .presentation h1 {
   margin: 0px;
-  text-align: center;
-}
-.presentation P {
-  color: rgb(86, 82, 82);
-  text-align: center;
 }
 .presentation button {
   border-radius: 25px;
@@ -89,44 +85,47 @@ nav input {
   margin: 10px;
 }
 .fonctionnement ul {
-  flex-direction: column;
   padding: 0px;
   list-style: none;
 }
 .fonctionnement ul li {
+  width: 325px;
+  height: 70px;
+  border-radius: 25px;
   background-color: #f6f6f6;
   box-shadow: 0px 6px 17px #c7c7c7;
-  border-radius: 25px;
-  height: 70px;
-  width: 325px;
   margin: 10px;
 }
 .fonctionnement ul li span {
-  border-radius: 25px;
   width: 25px;
   height: 25px;
+  border-radius: 25px;
   background-color: #9356DC;
   color: #fdfdfd;
 }
 
 .resto {
   background-color: #f6f6f6;
-  flex-direction: column;
   padding: 20px;
 }
 .resto .image {
-  flex-direction: column;
   text-decoration: none;
   background-color: white;
-  width: 100%;
 }
 .resto .image img {
   width: 100%;
   height: 50%;
   border-radius: 25px;
 }
-.resto .image .coeur {
-  flex-direction: column;
+.resto .image .txt {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: center;
+  color: #070707;
+}
+.resto .image .txt h2, .resto .image .txt p {
+  margin: 0%;
 }
 
 /*# sourceMappingURL=style.css.map */
