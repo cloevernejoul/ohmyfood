@@ -1,3 +1,7 @@
+
+
+/* page accueil */
+
 nav {
     background-color: $gris-secondaire;
     box-shadow: inset 0px 2px 5px #c7c7c7;
@@ -13,12 +17,15 @@ nav {
 
 .presentation {
     background-color: $gris-principale;
-    padding: 35px;
+    padding: 50px 30px;
     @extend %flex-center;
     flex-direction: column;
 
     h1 {
       margin: 0px;
+    }
+    P{
+      font-weight: 200;
     }
     button {
        @include bouton(66%);
@@ -39,11 +46,16 @@ nav {
         background-color: $gris-principale;
         box-shadow: 0px 6px 17px #c7c7c7;
         margin: 10px;
+        justify-content: space-evenly;
+        font-weight: bold;
+        
               span {
                     @extend %flex-center;
                     @include dimension (25px,25px,25px);
                     background-color: $fond-violet;
-                    color:$txt-fond-sombre ;
+                    color:$txt-fond-sombre;
+                    position: absolute;
+                    left: 9px;
                   }
        }
   }
@@ -55,13 +67,25 @@ nav {
 
     .image {
       @extend %flex-column;
+      height: 265%;
+      border-radius: 25px;
       text-decoration: none;
       background-color: white;
+      margin: 10px;
       
         img {
-        @include dimension (100%,50%,25px);
+        object-fit: cover;
+        @include dimension (100%,170px,25px 25px 0px 0px);
        }
 
+       span {
+        @extend %flex-center;
+        @include dimension (90px,30px,5px);
+        color: #1b876c;
+        background-color: $fond-vert;
+        position: absolute;
+        right: 45px;
+       }
        .txt {
         display: flex;
         justify-content: space-between;
@@ -76,3 +100,8 @@ nav {
        
     }
 }
+
+
+
+
+/* page menu */

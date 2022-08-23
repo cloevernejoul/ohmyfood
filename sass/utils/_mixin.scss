@@ -14,3 +14,8 @@
         height: $hauteur;
         border-radius: $radius;
     }
+
+@mixin page ($padding,$margin){
+        padding: $padding;
+        margin: $margin;
+}
