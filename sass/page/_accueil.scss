@@ -33,7 +33,7 @@ nav {
 }
 
 .fonctionnement {
-  margin: 10px;
+  margin: 50px 20px;
     
   ul {
     @extend %flex-column;
@@ -47,7 +47,7 @@ nav {
         box-shadow: 0px 6px 17px #c7c7c7;
         margin: 10px;
         justify-content: space-evenly;
-        font-weight: bold;
+        font-weight:bold;
         
               span {
                     @extend %flex-center;
@@ -55,7 +55,7 @@ nav {
                     background-color: $fond-violet;
                     color:$txt-fond-sombre;
                     position: absolute;
-                    left: 9px;
+                    left: 20px;
                   }
        }
   }
@@ -71,6 +71,7 @@ nav {
       border-radius: 25px;
       text-decoration: none;
       background-color: white;
+      box-shadow: 0px 6px 17px #c7c7c7;
       margin: 10px;
       
         img {
@@ -92,9 +93,20 @@ nav {
         flex-direction: row-reverse;
         align-items: center;
         color: $txt-fond-clair;
+        padding: 5%;
         
-                  h2, p {
-                  margin: 0%;
+                  h2 {
+                    font-size: larger;
+                    font-weight:bold;
+                    margin: 0%;
+                  }
+                  p {
+                    margin:0%;
+                    padding-top: 5%;
+                  }
+
+                i {
+                  font-size: x-large;
                 }
        }
        
@@ -105,3 +117,10 @@ nav {
 
 
 /* page menu */
+
+
+article {
+            img {
+            @include dimension (220px,150px,0px)
+            }
+}

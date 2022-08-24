@@ -3,6 +3,11 @@
       
       padding: 20px 0px;
       @extend %flex-center;  
+
+      a {
+        font-size: 40px;
+        color: $txt-fond-clair;
+      }
         
       img {
         width: 60%;
@@ -16,6 +21,7 @@
       h1 {
         font-family: 'Shrikhand', cursive;
         color: $txt-fond-sombre;
+        font-size:x-large;
 
       }
     
