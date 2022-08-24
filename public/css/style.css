@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Shrikhand&display=swap");
-.resto .image span, .fonctionnement ul li span, .fonctionnement ul li, .presentation, nav, header {
+.menu .boxmenu .txtmenu, .titremenu, .resto .image span, .fonctionnement ul li span, .fonctionnement ul li, .presentation, nav, header {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 
-.resto .image, .resto, .fonctionnement ul {
+.menu .boxmenu, .menu, .resto .image, .resto, .fonctionnement ul {
   display: flex;
   flex-direction: column;
 }
@@ -80,14 +80,20 @@ nav input {
 .presentation P {
   font-weight: 200;
 }
-.presentation button {
+
+a {
+  text-decoration: none;
+}
+a button {
   border-radius: 25px;
   height: 50px;
-  width: 66%;
+  width: 100%;
   border: none;
   color: #fdfdfd;
   background: linear-gradient(#FF79DA, #9356DC);
   box-shadow: 0px 2px 5px #c7c7c7;
+  padding: 15px;
+  margin-top: 15px;
 }
 
 .fonctionnement {
@@ -122,6 +128,7 @@ nav input {
   padding: 20px;
 }
 .resto .image {
+  width: 100%;
   height: 265%;
   border-radius: 25px;
   text-decoration: none;
@@ -139,7 +146,7 @@ nav input {
   width: 90px;
   height: 30px;
   border-radius: 5px;
-  color: #1b876c;
+  color: #149273;
   background-color: #99E2D0;
   position: absolute;
   right: 45px;
@@ -167,9 +174,43 @@ nav input {
 
 /* page menu */
 article img {
-  width: 220px;
-  height: 150px;
+  width: 100%;
+  height: 100%;
   border-radius: 0px;
+}
+
+.titremenu {
+  justify-content: flex-start;
+  font-family: "Shrikhand", cursive;
+  font-size: smaller;
+}
+.titremenu i {
+  font-size: x-large;
+  padding-left: 45px;
+}
+
+.menu {
+  width: 100%;
+  height: 120%;
+  border-radius: 25px;
+  background-color: #f6f6f6;
+  padding: 15px;
+}
+.menu h2 {
+  font-weight: 200;
+  border-bottom: 3px solid #99E2D0;
+}
+.menu .boxmenu {
+  width: 100%;
+  height: 265%;
+  border-radius: 25px;
+  background-color: white;
+  box-shadow: 0px 6px 17px #c7c7c7;
+  margin: 20px 0px;
+}
+.menu .boxmenu .txtmenu {
+  justify-content: space-between;
+  color: #070707;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,116 +1,123 @@
-
-
 /* page accueil */
 
 nav {
-    background-color: $gris-secondaire;
-    box-shadow: inset 0px 2px 5px #c7c7c7;
-    @extend %flex-center;
-   
-    input{
-        border: none;
-        background-color: transparent;
-        padding: 13PX 10PX;
-        text-align: center;
-        }
-    }
+  background-color: $gris-secondaire;
+  box-shadow: inset 0px 2px 5px #c7c7c7;
+  @extend %flex-center;
+
+  input {
+    border: none;
+    background-color: transparent;
+    padding: 13PX 10PX;
+    text-align: center;
+  }
+}
 
 .presentation {
-    background-color: $gris-principale;
-    padding: 50px 30px;
-    @extend %flex-center;
-    flex-direction: column;
+  background-color: $gris-principale;
+  padding: 50px 30px;
+  @extend %flex-center;
+  flex-direction: column;
 
-    h1 {
-      margin: 0px;
-    }
-    P{
-      font-weight: 200;
-    }
+  h1 {
+    margin: 0px;
+  }
+
+  P {
+    font-weight: 200;
+  }
+} 
+a {
+    text-decoration: none;
+
     button {
-       @include bouton(66%);
+      @include bouton(100%);
+      padding: 15px;
+      margin-top: 15px;
     }
-}
+  }
 
 .fonctionnement {
   margin: 50px 20px;
-    
+
   ul {
     @extend %flex-column;
     padding: 0px;
     list-style: none;
 
-       li {
+    li {
+      @extend %flex-center;
+      @include dimension(325px, 70px, 25px);
+      background-color: $gris-principale;
+      box-shadow: 0px 6px 17px #c7c7c7;
+      margin: 10px;
+      justify-content: space-evenly;
+      font-weight: bold;
+
+      span {
         @extend %flex-center;
-        @include dimension(325px,70px,25px);
-        background-color: $gris-principale;
-        box-shadow: 0px 6px 17px #c7c7c7;
-        margin: 10px;
-        justify-content: space-evenly;
-        font-weight:bold;
-        
-              span {
-                    @extend %flex-center;
-                    @include dimension (25px,25px,25px);
-                    background-color: $fond-violet;
-                    color:$txt-fond-sombre;
-                    position: absolute;
-                    left: 20px;
-                  }
-       }
+        @include dimension (25px, 25px, 25px);
+        background-color: $fond-violet;
+        color: $txt-fond-sombre;
+        position: absolute;
+        left: 20px;
+      }
+    }
   }
 }
+
 .resto {
   background-color: $gris-principale;
   @extend %flex-column;
   padding: 20px;
 
-    .image {
-      @extend %flex-column;
-      height: 265%;
-      border-radius: 25px;
-      text-decoration: none;
-      background-color: white;
-      box-shadow: 0px 6px 17px #c7c7c7;
-      margin: 10px;
-      
-        img {
-        object-fit: cover;
-        @include dimension (100%,170px,25px 25px 0px 0px);
-       }
+  .image {
+    @extend %flex-column;
+    @include dimension (100%, 265%, 25px);
+    text-decoration: none;
+    background-color: white;
+    box-shadow: 0px 6px 17px #c7c7c7;
+    margin: 10px;
 
-       span {
-        @extend %flex-center;
-        @include dimension (90px,30px,5px);
-        color: #1b876c;
-        background-color: $fond-vert;
-        position: absolute;
-        right: 45px;
-       }
-       .txt {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row-reverse;
-        align-items: center;
-        color: $txt-fond-clair;
-        padding: 5%;
-        
-                  h2 {
-                    font-size: larger;
-                    font-weight:bold;
-                    margin: 0%;
-                  }
-                  p {
-                    margin:0%;
-                    padding-top: 5%;
-                  }
-
-                i {
-                  font-size: x-large;
-                }
-       }
-       
+    img {
+      object-fit: cover;
+      @include dimension (100%, 170px, 25px 25px 0px 0px);
     }
+
+    span {
+      @extend %flex-center;
+      @include dimension (90px, 30px, 5px);
+      color: #149273;
+      background-color: $fond-vert;
+      position: absolute;
+      right: 45px;
+    }
+
+    .txt {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      align-items: center;
+      color: $txt-fond-clair;
+      padding: 5%;
+
+      h2 {
+        font-size: larger;
+        font-weight: bold;
+        margin: 0%;
+      }
+
+      p {
+        margin: 0%;
+        padding-top: 5%;
+      }
+
+      i {
+        font-size: x-large;
+      }
+    }
+
+  }
 }
 
 
@@ -120,7 +127,48 @@ nav {
 
 
 article {
-            img {
-            @include dimension (220px,150px,0px)
-            }
+  img {
+    @include dimension (100%, 100%, 0px)
+  }
+}
+
+.titremenu {
+  @extend %flex-center;
+  justify-content: flex-start;
+  font-family: 'Shrikhand', cursive;
+  font-size: smaller;
+
+  i {
+    font-size: x-large;
+    padding-left: 45px;
+  }
+}
+
+.menu {
+  @include dimension (100%, 120%, 25px);
+  @extend %flex-column;
+  background-color: $gris-principale;
+  padding: 15px;
+
+  h2 {
+    font-weight: 200;
+    border-bottom: 3px solid $fond-vert;
+  }
+
+  .boxmenu {
+    @extend %flex-column;
+    @include dimension (100%, 265%, 25px);
+    background-color: white;
+    box-shadow: 0px 6px 17px #c7c7c7;
+    margin: 20px 0px;
+
+
+    .txtmenu {
+      @extend %flex-center;
+      justify-content: space-between;
+      color: $txt-fond-clair;
+    }
+  }
+
+
 }
