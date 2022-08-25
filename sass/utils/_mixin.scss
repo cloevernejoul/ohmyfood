@@ -9,13 +9,9 @@
     }    
 
     
-@mixin dimension ($longeur,$hauteur,$radius){
+@mixin dimension ($hauteur,$radius,$longeur:100%){
         width: $longeur;
         height: $hauteur;
         border-radius: $radius;
     }
 
-@mixin page ($padding,$margin){
-        padding: $padding;
-        margin: $margin;
-}

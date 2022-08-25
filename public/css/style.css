@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Shrikhand&display=swap");
-.menu button, .menu .boxmenu .txtmenu, .titremenu, .resto .image span, .fonctionnement ul li span, .fonctionnement ul li, .presentation, nav, header {
+.menu A, .menu .boxmenu .txtmenu, .titremenu, #resto .image span, .fonctionnement ul li span, .fonctionnement ul li, .presentation, nav, header {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 
-.menu .boxmenu, .menu, .resto .image, .resto, .fonctionnement ul {
+.menu .boxmenu, .menu, #resto .image, #resto, .fonctionnement ul {
   display: flex;
   flex-direction: column;
 }
@@ -28,6 +28,8 @@ header {
 header a {
   font-size: 40px;
   color: #070707;
+  position: absolute;
+  left: 13px;
 }
 header img {
   width: 60%;
@@ -80,20 +82,17 @@ nav input {
 .presentation P {
   font-weight: 200;
 }
-
-a {
-  text-decoration: none;
-}
-a button {
+.presentation a {
   border-radius: 25px;
   height: 50px;
-  width: 100%;
+  width: 70%;
   border: none;
   color: #fdfdfd;
   background: linear-gradient(#FF79DA, #9356DC);
   box-shadow: 0px 2px 5px #c7c7c7;
   padding: 15px;
   margin-top: 15px;
+  text-decoration: none;
 }
 
 .fonctionnement {
@@ -123,11 +122,11 @@ a button {
   left: 20px;
 }
 
-.resto {
+#resto {
   background-color: #f6f6f6;
   padding: 20px;
 }
-.resto .image {
+#resto .image {
   width: 100%;
   height: 265%;
   border-radius: 25px;
@@ -136,13 +135,13 @@ a button {
   box-shadow: 0px 6px 17px #c7c7c7;
   margin: 10px;
 }
-.resto .image img {
+#resto .image img {
   object-fit: cover;
   width: 100%;
   height: 170px;
   border-radius: 25px 25px 0px 0px;
 }
-.resto .image span {
+#resto .image span {
   width: 90px;
   height: 30px;
   border-radius: 5px;
@@ -151,7 +150,7 @@ a button {
   position: absolute;
   right: 45px;
 }
-.resto .image .txt {
+#resto .image .txt {
   display: flex;
   justify-content: space-between;
   flex-direction: row-reverse;
@@ -159,16 +158,16 @@ a button {
   color: #070707;
   padding: 5%;
 }
-.resto .image .txt h2 {
+#resto .image .txt h2 {
   font-size: larger;
   font-weight: bold;
   margin: 0%;
 }
-.resto .image .txt p {
+#resto .image .txt p {
   margin: 0%;
   padding-top: 5%;
 }
-.resto .image .txt i {
+#resto .image .txt i {
   font-size: x-large;
 }
 
@@ -177,6 +176,7 @@ article img {
   width: 100%;
   height: 100%;
   border-radius: 0px;
+  object-fit: cover;
 }
 
 .titremenu {
@@ -190,15 +190,26 @@ article img {
 }
 
 .menu {
-  width: 100%;
-  height: 120%;
-  border-radius: 25px;
   background-color: #f6f6f6;
   padding: 15px;
 }
+.menu #espace {
+  width: 100%;
+  height: 30PX;
+  border-radius: 30PX 30PX 0 0;
+  left: 0;
+  position: absolute;
+  margin-top: -45px;
+  background-color: #f6f6f6;
+}
+.menu h1 {
+  margin-top: 0;
+}
 .menu h2 {
   font-weight: 200;
-  border-bottom: 3px solid #99E2D0;
+}
+.menu hr {
+  border: 3px solid #99E2D0;
 }
 .menu .boxmenu {
   width: 100%;
@@ -217,10 +228,11 @@ article img {
 .menu .boxmenu span {
   font-weight: bold;
 }
-.menu .boxmenu h3, .menu .boxmenu p {
+.menu .boxmenu h3,
+.menu .boxmenu p {
   margin: 0;
 }
-.menu button {
+.menu A {
   border-radius: 25px;
   height: 50px;
   width: 60%;
@@ -228,6 +240,9 @@ article img {
   color: #fdfdfd;
   background: linear-gradient(#FF79DA, #9356DC);
   box-shadow: 0px 2px 5px #c7c7c7;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */

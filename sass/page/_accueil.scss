@@ -26,16 +26,15 @@ nav {
   P {
     font-weight: 200;
   }
-} 
-a {
-    text-decoration: none;
 
-    button {
-      @include bouton(100%);
-      padding: 15px;
-      margin-top: 15px;
-    }
+  a {
+    @include bouton(70%);
+    padding: 15px;
+    margin-top: 15px;
+    text-decoration: none;
   }
+
+}
 
 .fonctionnement {
   margin: 50px 20px;
@@ -47,7 +46,7 @@ a {
 
     li {
       @extend %flex-center;
-      @include dimension(325px, 70px, 25px);
+      @include dimension(70px, 25px, 325px);
       background-color: $gris-principale;
       box-shadow: 0px 6px 17px #c7c7c7;
       margin: 10px;
@@ -66,14 +65,14 @@ a {
   }
 }
 
-.resto {
+#resto {
   background-color: $gris-principale;
   @extend %flex-column;
   padding: 20px;
 
   .image {
     @extend %flex-column;
-    @include dimension (100%, 265%, 25px);
+    @include dimension (265%, 25px, 100%);
     text-decoration: none;
     background-color: white;
     box-shadow: 0px 6px 17px #c7c7c7;
@@ -81,12 +80,12 @@ a {
 
     img {
       object-fit: cover;
-      @include dimension (100%, 170px, 25px 25px 0px 0px);
+      @include dimension (170px, 25px 25px 0px 0px, 100%);
     }
 
     span {
       @extend %flex-center;
-      @include dimension (90px, 30px, 5px);
+      @include dimension (30px, 5px, 90px);
       color: #149273;
       background-color: $fond-vert;
       position: absolute;
@@ -128,7 +127,8 @@ a {
 
 article {
   img {
-    @include dimension (100%, 100%, 0px)
+    @include dimension (100%, 0px, 100%, );
+    object-fit: cover;
   }
 }
 
@@ -145,19 +145,35 @@ article {
 }
 
 .menu {
-  @include dimension (100%, 120%, 25px);
   @extend %flex-column;
   background-color: $gris-principale;
   padding: 15px;
 
+
+  #espace {
+    @include dimension (30PX, 30PX 30PX 0 0, 100%);
+    left: 0;
+    position: absolute;
+    margin-top: -45px;
+    background-color:$gris-principale;
+  }
+
+  h1 {
+    margin-top: 0;
+  }
+
   h2 {
     font-weight: 200;
-    border-bottom: 3px solid $fond-vert;
+
+  }
+
+  hr {
+    border: 3px solid $fond-vert;
   }
 
   .boxmenu {
     @extend %flex-column;
-    @include dimension (100%, 265%, 25px);
+    @include dimension (265%, 25px, 100%);
     background-color: white;
     box-shadow: 0px 6px 17px #c7c7c7;
     margin: 20px 0px;
@@ -168,21 +184,25 @@ article {
       @extend %flex-center;
       justify-content: space-between;
       color: $txt-fond-clair;
-      padding-top:8px ;
+      padding-top: 8px;
     }
 
     span {
       font-weight: bold;
     }
 
-    h3,p {
+    h3,
+    p {
       margin: 0;
     }
   }
 
-  button {
+  A {
     @extend %flex-center;
     @include bouton (60%);
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
   }
 
 }
