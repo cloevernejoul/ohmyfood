@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Shrikhand&display=swap");
-.menu .boxmenu .txtmenu, .titremenu, .resto .image span, .fonctionnement ul li span, .fonctionnement ul li, .presentation, nav, header {
+.menu button, .menu .boxmenu .txtmenu, .titremenu, .resto .image span, .fonctionnement ul li span, .fonctionnement ul li, .presentation, nav, header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -207,10 +207,27 @@ article img {
   background-color: white;
   box-shadow: 0px 6px 17px #c7c7c7;
   margin: 20px 0px;
+  padding: 15px;
 }
 .menu .boxmenu .txtmenu {
   justify-content: space-between;
   color: #070707;
+  padding-top: 8px;
+}
+.menu .boxmenu span {
+  font-weight: bold;
+}
+.menu .boxmenu h3, .menu .boxmenu p {
+  margin: 0;
+}
+.menu button {
+  border-radius: 25px;
+  height: 50px;
+  width: 60%;
+  border: none;
+  color: #fdfdfd;
+  background: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 0px 2px 5px #c7c7c7;
 }
 
 /*# sourceMappingURL=style.css.map */
