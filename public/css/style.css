@@ -15,6 +15,25 @@
   box-sizing: border-box;
 }
 
+/* desktop */
+@media screen and (max-width: 1170px) {
+  .container {
+    max-width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: "Roboto", sans-serif;
+  }
+}
+/* tablette */
+@media screen and (max-width: 992px) {
+  .container {
+    max-width: 992px;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: "Roboto", sans-serif;
+  }
+}
+/* mobile */
 .container {
   max-width: 765px;
   margin-right: auto;
@@ -59,7 +78,7 @@ footer ul li a i {
   padding-right: 10px;
 }
 
-/* page accueil */
+/* page accueil mobile */
 nav {
   background-color: #eaeaea;
   box-shadow: inset 0px 2px 5px #c7c7c7;
@@ -93,6 +112,10 @@ nav input {
   padding: 15px;
   margin-top: 15px;
   text-decoration: none;
+}
+.presentation a:hover {
+  background: linear-gradient(#fdabe6, #b178f7);
+  box-shadow: 0px 2px 10px #c7c7c7;
 }
 
 .fonctionnement {
@@ -133,7 +156,7 @@ nav input {
   text-decoration: none;
   background-color: white;
   box-shadow: 0px 6px 17px #c7c7c7;
-  margin: 10px;
+  margin-bottom: 20px;
 }
 #resto .image img {
   object-fit: cover;
@@ -149,6 +172,10 @@ nav input {
   background-color: #99E2D0;
   position: absolute;
   right: 45px;
+  top: 1235px;
+}
+#resto .image #span {
+  top: 963px;
 }
 #resto .image .txt {
   display: flex;
@@ -170,7 +197,20 @@ nav input {
 #resto .image .txt i {
   font-size: x-large;
 }
+#resto .image .txt i:hover {
+  background-image: linear-gradient(#FF79DA, #9356DC);
+}
 
+/* page d'accueil tablette */
+@media screen and (max-width: 992px) {
+  .fonctionnement ul {
+    align-items: center;
+  }
+  .fonctionnement ul span {
+    position: absolute;
+    left: 210px;
+  }
+}
 /* page menu */
 article img {
   width: 100%;
@@ -187,6 +227,9 @@ article img {
 .titremenu i {
   font-size: x-large;
   padding-left: 45px;
+}
+.titremenu i:hover {
+  background-image: linear-gradient(#FF79DA, #9356DC);
 }
 
 .menu {
@@ -213,17 +256,26 @@ article img {
 }
 .menu .boxmenu {
   width: 100%;
-  height: 265%;
+  height: 80px;
   border-radius: 25px;
   background-color: white;
   box-shadow: 0px 6px 17px #c7c7c7;
   margin: 20px 0px;
   padding: 15px;
 }
+.menu .boxmenu .overflow-ellipsis {
+  width: 80%;
+  height: 25px;
+  border-radius: 0px;
+  background-color: #149273;
+  text-overflow: ellipsis;
+}
 .menu .boxmenu .txtmenu {
+  text-align: left;
   justify-content: space-between;
   color: #070707;
   padding-top: 8px;
+  text-overflow: ellipsis;
 }
 .menu .boxmenu span {
   font-weight: bold;
@@ -231,6 +283,7 @@ article img {
 .menu .boxmenu h3,
 .menu .boxmenu p {
   margin: 0;
+  direction: ltr;
 }
 .menu A {
   border-radius: 25px;
