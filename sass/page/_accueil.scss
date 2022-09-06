@@ -174,9 +174,6 @@ h1 {
   .bloc-resto {
     margin: 10px;
   }
-
-
-
 }
 
 /* page menu */
@@ -213,7 +210,7 @@ article {
       background-color: transparent;
       height: 30px;
       position: absolute;
-      right: 25px;
+      left: 80%;
 
     }
 
@@ -221,7 +218,7 @@ article {
       position: absolute;
       @extend %coeur;
       left: 6px;
-      top: -5px;
+      top: -1px;
     }
 
     .fa-solid:hover {
@@ -282,12 +279,13 @@ article {
   }
 
   a:hover {
-    @extend %btn-hover
+    @extend %btn-hover;
   }
 }
 
 
 /* page menu tablette */
+
 
 @media screen and (min-width: 768px) {
 
@@ -320,15 +318,48 @@ article {
 
       }
     }
+
     section {
       display: flex;
       flex-direction: column;
       align-items: center;
-      
+
     }
+
     .boxmenu {
       @include dimension (80px, 25px, 70%);
     }
 
   }
+}
+
+/* page menu desktop */
+
+@media screen and (min-width: 992px){
+
+
+header {
+  a {
+    display: none;
+  }
+}
+
+
+article {
+  padding: 50px 20px;
+
+  img {
+    @include dimension (80%, 25px, 30%)
+  }
+}
+
+.titremenu {
+
+  .btn-coeur-menu {
+    right: 280px;
+  }
+
+}
+
+
 }
