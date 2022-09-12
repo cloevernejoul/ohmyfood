@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Shrikhand&display=swap');
 * {
-    box-sizing: border-box;
-
-   @extend %loading-spinner; 
-    
+    box-sizing: border-box; 
 }
 /* mobile */
 
@@ -11,7 +8,7 @@
     margin-right:auto;
     margin-left:auto;
     font-family: 'Roboto', sans-serif;
-    
+    @extend %loading-spinner; 
 }
 
 /* tablette */

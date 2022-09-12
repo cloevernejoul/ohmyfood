@@ -96,13 +96,11 @@ h1 {
     span {
       @extend %flex-center;
       @include dimension (30px, 5px, 90px);
+      @include absolute (7px, 20px);
       color: #149273;
       background-color: $fond-vert;
-      position: absolute;
-      right: 20px;
-      top: 7px;
-    }
 
+    }
   }
 
   .txt {
@@ -129,19 +127,14 @@ h1 {
     position: relative;
 
     .btn-coeur {
-      border: none;
-      background-color: transparent;
-      height: 30px;
+      @extend %btn-coeur;
       position: absolute;
-      bottom: 30px;
-      right: 20px;
-
+      right: 23px;
+      bottom: 10%;
     }
 
     .fa-solid {
-      position: absolute;
-      bottom: 0px;
-      right: 6px;
+      @include absolute (9px, 17px);
       @extend %coeur;
     }
 
@@ -160,11 +153,31 @@ h1 {
   .desktop {
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
     background-color: $gris-secondaire;
   }
 
   .presentation {
     background-color: $gris-secondaire;
+  }
+
+  .fonctionnement {
+
+    ul {
+      flex-direction: row;
+
+      li {
+        margin: 20px;
+      }
+
+      span {
+        position: absolute;
+        margin-left: -288px;
+
+
+      }
+
+    }
   }
 
   .desktop-resto {
@@ -181,7 +194,7 @@ h1 {
 
 article {
   img {
-    @include dimension (100%, 0px, 100%, );
+    @include dimension (300px, 0px, 100%);
     object-fit: cover;
   }
 }
@@ -204,21 +217,18 @@ article {
     justify-content: flex-start;
     font-family: 'Shrikhand', cursive;
     font-size: smaller;
+    position: relative;
 
     .btn-coeur-menu {
-      border: none;
-      background-color: transparent;
-      height: 30px;
+      @extend %btn-coeur;
       position: absolute;
-      left: 80%;
-
+      right: 8%;
     }
 
     .fa-solid {
       position: absolute;
+      right: 36%;
       @extend %coeur;
-      left: 6px;
-      top: -1px;
     }
 
     .fa-solid:hover {
@@ -241,12 +251,12 @@ article {
   }
 
   .boxmenu {
-    @extend %flex-column;
+    @extend %flex-center;
+    justify-content: space-between;
     @include dimension (80px, 25px, 100%);
     background-color: white;
     box-shadow: 0px 6px 17px #c7c7c7;
     margin: 20px 0px;
-    padding: 15px;
 
     .txtmenu {
       @extend %flex-center;
@@ -256,6 +266,17 @@ article {
       padding-top: 8px;
 
     }
+
+      .animation-check {
+        @extend %flex-center;
+        background-color: $fond-vert;
+        @include dimension (100%, 0px 25px 25px 0px, 15%);
+
+        .fa-sharp {
+          color: white;
+        }
+      }
+
 
     span {
       font-weight: bold;
@@ -289,34 +310,19 @@ article {
 
 @media screen and (min-width: 768px) {
 
-  article {
-    display: flex;
-    justify-content: center;
-    padding: 50px 20px;
-    background-color: $gris-secondaire;
-    box-shadow: inset 0px 2px 5px #c7c7c7;
-
-    img {
-      @include dimension (80%, 25px, 80%)
+  header {
+    a {
+      left: 36px;
+      font-size: xx-large;
     }
   }
 
   .menu {
-    display: flex;
-
-    #espace {
-      display: none;
-    }
 
     .titremenu {
       padding-top: 40px;
       padding-left: 15px;
       font-size: larger;
-
-      .btn-coeur-menu {
-        right: 100px;
-
-      }
     }
 
     section {
@@ -330,36 +336,77 @@ article {
       @include dimension (80px, 25px, 70%);
     }
 
+    .titremenu {
+      .fa-solid {
+        top: 29%;
+        right: 39%;
+      }
+
+      .fa-solid:hover {
+        transform: scale(4.5);
+      }
+    }
   }
 }
 
 /* page menu desktop */
 
-@media screen and (min-width: 992px){
+@media screen and (min-width: 992px) {
 
 
-header {
-  a {
-    display: none;
-  }
-}
-
-
-article {
-  padding: 50px 20px;
-
-  img {
-    @include dimension (80%, 25px, 30%)
-  }
-}
-
-.titremenu {
-
-  .btn-coeur-menu {
-    right: 280px;
+  header {
+    a {
+      display: none;
+    }
   }
 
-}
 
+
+  article {
+    img {
+      @include dimension (470px, 0px, 100%);
+    }
+  }
+
+  .menu {
+    @extend %flex-column;
+    background-color: $gris-principale;
+    padding: 0px 15px;
+
+    #espace {
+      @include dimension (38px, 50px 50px 0 0, 100%);
+      position: absolute;
+      margin-top: -38px;
+    }
+
+    .titremenu {
+
+      h1 {
+        font-size: xxx-large;
+      }
+
+      .btn-coeur-menu {
+        font-size: initial;
+      }
+    }
+
+    .carte {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-around;
+      flex-direction: row;
+      margin: 20px;
+
+      .boxmenu {
+
+        width: 100%;
+
+        span {
+          margin-left: 10px;
+        }
+      }
+    }
+
+  }
 
 }

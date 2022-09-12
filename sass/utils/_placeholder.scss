@@ -10,19 +10,28 @@
     flex-direction: column;
 
 }
+%btn-coeur {
+        border: none;
+        background-color: transparent;
+        padding: 6px;
 
+
+}
 %coeur {
     color: transparent;
     line-height: normal;
     transition: all 0.3s linear;
+    padding: 1px;
+    font-size: xx-small;
 }
 
 %coeur-hover {
     background: linear-gradient($fond-rose, $fond-violet);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transform: scale(1.5);
+    transform: scale(4);
     cursor: pointer;
+    padding: 1px;
 }
 
 
@@ -41,12 +50,12 @@
         position: fixed;
         inset: 0;
         z-index: 1;
-        padding: 30% 50%;
+        padding: 250px 50%;
+
         opacity: 0.9;
-        
+
         .spinner {
-            
-            font-size: 50px;
+            font-size: 150%;
             width: 1em;
             height: 1em;
             border-radius: 50%;
