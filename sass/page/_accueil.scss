@@ -165,17 +165,7 @@ h1 {
 
     ul {
       flex-direction: row;
-
-      li {
-        margin: 20px;
-      }
-
-      span {
-        position: absolute;
-        margin-left: -288px;
-
-
-      }
+      justify-content: space-around;
 
     }
   }
@@ -210,6 +200,7 @@ article {
     position: absolute;
     margin-top: -38px;
     background-color: $gris-principale;
+
   }
 
   .titremenu {
@@ -251,39 +242,53 @@ article {
   }
 
   .boxmenu {
-    @extend %flex-center;
-    justify-content: space-between;
+    display: flex;
+    align-items: center;
     @include dimension (80px, 25px, 100%);
     background-color: white;
     box-shadow: 0px 6px 17px #c7c7c7;
     margin: 20px 0px;
+    text-decoration: none;
+    color: black;
+    overflow: hidden;
 
-    .txtmenu {
-      @extend %flex-center;
-      text-align: left;
-      justify-content: space-between;
-      color: $txt-fond-clair;
-      padding-top: 8px;
-
+    .gobaltxt {
+      padding: 10px;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
-      .animation-check {
-        @extend %flex-center;
-        background-color: $fond-vert;
-        @include dimension (100%, 0px 25px 25px 0px, 15%);
+    .animation-check {
+      @extend %flex-center;
+      background-color: $fond-vert;
+      @include dimension (100%, 0px 25px 25px 0px, 60px);
+      margin-right: -60px;
+      transition: all 0.5s;
 
-        .fa-sharp {
-          color: white;
-        }
+
+      .fa-sharp {
+        color: white;
+        overflow: hidden;
       }
+    }
+
+      &:hover .animation-check {
+        margin-right: 0%;
+      }
+
+
 
 
     span {
       font-weight: bold;
+      margin-left: auto;
+      margin-top: 25px;
+      padding: 0px 15px;
     }
 
     h3,
     p {
+      padding: 3px 0px;
       margin: 0;
       direction: ltr;
       white-space: nowrap;
@@ -292,16 +297,19 @@ article {
     }
   }
 
-  a {
-    @extend %flex-center;
-    @include bouton (60%);
-    text-decoration: none;
-    margin: 30px auto 50px auto;
+  .bouton {
+    a {
+      @extend %flex-center;
+      @include bouton (60%);
+      text-decoration: none;
+      margin: 30px auto 50px auto;
+    }
+
+    a:hover {
+      @extend %btn-hover;
+    }
   }
 
-  a:hover {
-    @extend %btn-hover;
-  }
 }
 
 
@@ -332,9 +340,6 @@ article {
 
     }
 
-    .boxmenu {
-      @include dimension (80px, 25px, 70%);
-    }
 
     .titremenu {
       .fa-solid {
@@ -360,8 +365,6 @@ article {
     }
   }
 
-
-
   article {
     img {
       @include dimension (470px, 0px, 100%);
@@ -374,9 +377,7 @@ article {
     padding: 0px 15px;
 
     #espace {
-      @include dimension (38px, 50px 50px 0 0, 100%);
-      position: absolute;
-      margin-top: -38px;
+      display: none;
     }
 
     .titremenu {
@@ -395,11 +396,8 @@ article {
       align-items: flex-start;
       justify-content: space-around;
       flex-direction: row;
-      margin: 20px;
 
       .boxmenu {
-
-        width: 100%;
 
         span {
           margin-left: 10px;
