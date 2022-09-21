@@ -10,13 +10,15 @@
     flex-direction: column;
 
 }
+
 %btn-coeur {
-        border: none;
-        background-color: transparent;
-        padding: 6px;
+    border: none;
+    background-color: transparent;
+    padding: 6px;
 
 
 }
+
 %coeur {
     color: transparent;
     line-height: normal;
@@ -51,7 +53,6 @@
         inset: 0;
         z-index: 1;
         padding: 250px 50%;
-
         opacity: 0.9;
 
         .spinner {
@@ -115,3 +116,23 @@
         }
     }
 }
+
+%check {
+
+    .fa-sharp {
+        animation-name: checkrotation;
+        animation-duration: 1s;
+    }
+
+    @keyframes checkrotation {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+}
+

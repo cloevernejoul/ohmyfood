@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Shrikhand&display=swap");
-.menu .bouton a, .menu .boxmenu .animation-check, .menu .titremenu, #resto .bloc-resto span, .fonctionnement ul li span, .fonctionnement ul li, .presentation, nav, header {
+.bouton a, .menu .animation-check, .menu .titremenu, #resto .bloc-resto span, .fonctionnement ul li span, .fonctionnement ul li, .presentation, nav, header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,7 +34,7 @@
   padding: 1px;
 }
 
-.menu .bouton a:hover, .presentation a:hover {
+.bouton a:hover, .presentation a:hover {
   background: linear-gradient(#fdabe6, #b178f7);
   box-shadow: 0px 2px 10px #8b8a8a;
 }
@@ -93,6 +93,19 @@
   }
   87.5% {
     box-shadow: 0em -2.6em 0em 0em rgba(95, 92, 96, 0.2), 1.8em -1.8em 0 0em rgba(95, 92, 96, 0.2), 2.5em 0em 0 0em rgba(95, 92, 96, 0.2), 1.75em 1.75em 0 0em rgba(95, 92, 96, 0.2), 0em 2.5em 0 0em rgba(95, 92, 96, 0.2), -1.8em 1.8em 0 0em rgba(95, 92, 96, 0.5), -2.6em 0em 0 0em rgba(95, 92, 96, 0.7), -1.8em -1.8em 0 0em #5f5c60;
+  }
+}
+
+.menu:hover .animation-check .fa-sharp, .menu .animation-check .fa-sharp .fa-sharp {
+  animation-name: checkrotation;
+  animation-duration: 1s;
+}
+@keyframes checkrotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 
@@ -356,6 +369,7 @@ article img {
   margin: 0%;
 }
 .menu .boxmenu {
+  animation: progressive;
   display: flex;
   align-items: center;
   width: 100%;
@@ -367,13 +381,37 @@ article img {
   text-decoration: none;
   color: black;
   overflow: hidden;
+  cursor: pointer;
+  border: none;
 }
-.menu .boxmenu .gobaltxt {
+.menu .boxmenu:nth-child(3) {
+  animation-duration: 1500ms;
+}
+.menu .boxmenu:nth-child(4) {
+  animation-duration: 2000ms;
+}
+.menu .boxmenu:nth-child(5) {
+  animation-duration: 2500ms;
+}
+.menu .boxmenu:nth-child(6) {
+  animation-duration: 3000ms;
+}
+@keyframes progressive {
+  from {
+    transform: translatey(60%);
+    opacity: 0;
+  }
+  to {
+    transform: translatey(0);
+    opacity: 1;
+  }
+}
+.menu .gobaltxt {
   padding: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu .boxmenu .animation-check {
+.menu .animation-check {
   background-color: #99E2D0;
   width: 60px;
   height: 100%;
@@ -381,21 +419,22 @@ article img {
   margin-right: -60px;
   transition: all 0.5s;
 }
-.menu .boxmenu .animation-check .fa-sharp {
+.menu .animation-check .fa-sharp {
   color: white;
   overflow: hidden;
+  font-size: xx-large;
 }
-.menu .boxmenu:hover .animation-check {
+.menu:hover .animation-check {
   margin-right: 0%;
 }
-.menu .boxmenu span {
+.menu span {
   font-weight: bold;
   margin-left: auto;
   margin-top: 25px;
   padding: 0px 15px;
 }
-.menu .boxmenu h3,
-.menu .boxmenu p {
+.menu h3,
+.menu p {
   padding: 3px 0px;
   margin: 0;
   direction: ltr;
@@ -403,7 +442,8 @@ article img {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu .bouton a {
+
+.bouton a {
   border-radius: 25px;
   height: 50px;
   width: 60%;
@@ -443,10 +483,18 @@ article img {
   header a {
     display: none;
   }
+  article {
+    display: flex;
+    width: 100%;
+    height: 479px;
+    border-radius: 0px;
+    background-color: #28282a;
+    align-items: center;
+  }
   article img {
     width: 100%;
     height: 470px;
-    border-radius: 0px;
+    border-radius: 110px;
   }
   .menu {
     background-color: #f6f6f6;
@@ -467,8 +515,10 @@ article img {
     justify-content: space-around;
     flex-direction: row;
   }
-  .menu .carte .boxmenu span {
-    margin-left: 10px;
+  .menu .boxmenu {
+    width: 350px;
+    height: 80px;
+    border-radius: 25px;
   }
 }
 

@@ -235,13 +235,18 @@ article {
 
   }
 
+
+
   hr {
     border-top: 4px solid $fond-vert;
     width: 18%;
     margin: 0%;
   }
 
+
+
   .boxmenu {
+    animation: progressive;
     display: flex;
     align-items: center;
     @include dimension (80px, 25px, 100%);
@@ -251,66 +256,94 @@ article {
     text-decoration: none;
     color: black;
     overflow: hidden;
+    cursor: pointer;
+    border: none;
 
-    .gobaltxt {
-      padding: 10px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .animation-check {
-      @extend %flex-center;
-      background-color: $fond-vert;
-      @include dimension (100%, 0px 25px 25px 0px, 60px);
-      margin-right: -60px;
-      transition: all 0.5s;
-
-
-      .fa-sharp {
-        color: white;
-        overflow: hidden;
+    @for $i from 3 through 6 {
+      &:nth-child(#{$i}) {
+        animation-duration: 500ms * $i;
       }
     }
 
-      &:hover .animation-check {
-        margin-right: 0%;
-      }
+  }
 
+  @keyframes progressive {
 
-
-
-    span {
-      font-weight: bold;
-      margin-left: auto;
-      margin-top: 25px;
-      padding: 0px 15px;
+    from {
+      transform: translatey(60%);
+      opacity: 0;
     }
 
-    h3,
-    p {
-      padding: 3px 0px;
-      margin: 0;
-      direction: ltr;
-      white-space: nowrap;
+    to {
+      transform: translatey(0);
+      opacity: 1;
+    }
+
+  }
+
+  .gobaltxt {
+    padding: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+  }
+
+  .animation-check {
+    @extend %flex-center;
+    background-color: $fond-vert;
+    @include dimension (100%, 0px 25px 25px 0px, 60px);
+    margin-right: -60px;
+    transition: all 0.5s;
+
+
+    .fa-sharp {
+      color: white;
       overflow: hidden;
-      text-overflow: ellipsis;
+      @extend %check;
+      font-size: xx-large;
     }
   }
 
-  .bouton {
-    a {
-      @extend %flex-center;
-      @include bouton (60%);
-      text-decoration: none;
-      margin: 30px auto 50px auto;
-    }
-
-    a:hover {
-      @extend %btn-hover;
-    }
+  &:hover .animation-check {
+    margin-right: 0%;
+    @extend %check;
   }
 
+
+
+
+  span {
+    font-weight: bold;
+    margin-left: auto;
+    margin-top: 25px;
+    padding: 0px 15px;
+  }
+
+  h3,
+  p {
+    padding: 3px 0px;
+    margin: 0;
+    direction: ltr;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
+
+.bouton {
+  a {
+    @extend %flex-center;
+    @include bouton (60%);
+    text-decoration: none;
+    margin: 30px auto 50px auto;
+  }
+
+  a:hover {
+    @extend %btn-hover;
+  }
+}
+
+
 
 
 /* page menu tablette */
@@ -366,8 +399,13 @@ article {
   }
 
   article {
+    display: flex;
+    @include dimension (479px, 0px, 100%);
+    background-color: $gris-tertiaire;
+    align-items: center;
+
     img {
-      @include dimension (470px, 0px, 100%);
+      @include dimension (470px, 110px, 100%);
     }
   }
 
@@ -397,12 +435,10 @@ article {
       justify-content: space-around;
       flex-direction: row;
 
-      .boxmenu {
+    }
 
-        span {
-          margin-left: 10px;
-        }
-      }
+    .boxmenu {
+      @include dimension (80px, 25px, 350px)
     }
 
   }
